@@ -20,6 +20,11 @@ public class Main {
         for (int i = 1; i < optimalWay.size(); ++i) {
             System.out.print(" -> " + optimalWay.get(i));
         }
+        long sum = 0;
+        for (int i = 0; i < optimalWay.size() - 1; i++){
+            sum = sum + table.get(optimalWay.get(i), optimalWay.get(i+1));
+        }
         System.out.println();
+        System.out.println("Длинна пути: " + sum);
     }
 }
